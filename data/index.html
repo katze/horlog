@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+    
+<head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="w3.css">
+    <script type="text/javascript" src="app.js"></script>
+</head>
+
+<body class="w3-animate-opacity">
+
+    <div class="w3-card w3-black w3-padding-small w3-center">
+        <h1>Horloge logarithmique</h1>
+    </div>
+
+    <div class="w3-card w3-padding-small w3-center">
+        <p>Après une coupure de courant, il est nécessaire de recalibrer la position des aiguilles de l'horloge.<br/>
+        Déplacez les aiguilles sur <strong>00:00</strong> puis validez</p>
+        
+        <p>
+            Aiguille des minutes :<br/>
+            <button id="hour" class="w3-btn w3-blue-grey w3-circle" onclick="moveNeedle('minute', -15)"><<<</button>
+            <button id="hour" class="w3-btn w3-blue-grey w3-circle" onclick="moveNeedle('minute', -5)"><<</button>
+            <button id="hour" class="w3-btn w3-blue-grey w3-circle" onclick="moveNeedle('minute', -1)"><</button>
+            <button id="hour" class="w3-btn w3-blue-grey w3-circle" onclick="moveNeedle('minute', +1)">></button>
+            <button id="hour" class="w3-btn w3-blue-grey w3-circle" onclick="moveNeedle('minute', +5)">>></button>
+            <button id="hour" class="w3-btn w3-blue-grey w3-circle" onclick="moveNeedle('minute', +15)">>>></button>
+        </p>
+
+        <p>
+            Aiguille des heures :<br/>
+            <button id="hour" class="w3-btn w3-blue-grey w3-circle" onclick="moveNeedle('hour', -15)"><<<</button>
+            <button id="hour" class="w3-btn w3-blue-grey w3-circle" onclick="moveNeedle('hour', -5)"><<</button>
+            <button id="hour" class="w3-btn w3-blue-grey w3-circle" onclick="moveNeedle('hour', -1)"><</button>
+            
+            <button id="hour" class="w3-btn w3-blue-grey w3-circle" onclick="moveNeedle('hour', +1)">></button>
+            <button id="hour" class="w3-btn w3-blue-grey w3-circle" onclick="moveNeedle('hour', +5)">>></button>
+            <button id="hour" class="w3-btn w3-blue-grey w3-circle" onclick="moveNeedle('hour', +15)">>>></button>
+        </p>
+
+
+            <button id="hour" class="w3-button w3-block w3-teal" onclick="validate()">Valider</button>
+
+
+    </div>
+
+    <div class="w3-card w3-blue w3-padding-small w3-center" id="response" style="display:none">
+        <div id="message"></div>
+    </div>
+    
+
+</body>
+
+</html>
